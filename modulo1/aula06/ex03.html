@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula4 de js</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: white;
+            color: white;
+        }
+
+        div{
+            background-color: rgba(221, 221, 12, 0.623);
+            text-align: center;
+            border-radius: 50%;
+
+            padding: 30px;
+            margin: 30px auto;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        #php{
+            background-color: #7377AD;
+            border: 10px solid #464A85;
+        }
+
+        #php h1{
+            font-size: 3em;
+            padding: 0;
+        }
+        
+        #js{
+            position: relative;
+            border-radius: 0;
+            background-color: #EFD81D;
+            color: black;
+            font-size: 3em;
+
+
+            max-width: 100px;
+            min-width: 100px;
+            height: 100px;
+        }
+
+        #js > h1{
+            position: absolute;
+            top: 73%;
+            left: 61%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>Hello, world!!!</h1>
+        <h2>de gustavo guanabara</h2>
+    </div>
+    <div id="php">
+        <h1>PHP</h1>
+
+    </div>
+    
+    <div id="js">
+        <h1>JS</h1>
+    </div>
+
+    <script>
+        var nome = window.prompt('your name')
+        window.alert('welcome ' + nome + '!!!')
+
+    </script>
+</body>
+</html>
