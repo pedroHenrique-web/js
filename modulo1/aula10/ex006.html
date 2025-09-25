@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events DOM</title>
+    <style>
+        *{
+            text-align: center;
+
+            margin: 0;
+            padding: 0;
+
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+
+        }
+        body{
+            background-color: burlywood;
+        }
+
+        #area{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: rgba(85, 26, 26, 0.822);
+            padding: 50px;
+            max-width: 500px;
+            min-width: 325px;
+
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.308);  
+        }
+
+        #buttonClick{
+            background-color: rgba(85, 26, 26, 0.822);
+            padding: 50px;
+            max-width: 500px;
+            min-width: 325px;
+
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.308);  
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="area" ">
+        interaja
+    </div>
+    <script>
+        var area = document.querySelector('#area')
+        area.addEventListener('click', clickMe)
+        area.addEventListener('mouseenter', enter)
+        area.addEventListener('mouseout', leave)
+
+
+        function clickMe(){
+            area.innerText = "clicked"
+        }
+        function enter(){
+            area.style.background = "red"
+        }
+        function leave(){
+            area.style.background = "blue"
+        }
+    </script>
+</body>
+</html>

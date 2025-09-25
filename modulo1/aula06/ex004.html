@@ -19,10 +19,20 @@
 
     <script>
         var nome = window.prompt('write your name')
+        var nota1 = Number.parseFloat(window.prompt('write your school grade'))
+        var nota2 = Number.parseFloat(window.prompt('write your second school grade'))
 
-        document.write(`you name have ${nome.length} chars>`)
+        document.write(`Hello ${nome}!!! <br>`)
+        document.write(`your name have ${nome.length} chars`)
 
+        media = nota1 + nota2
+        approved_or_failed = media>= 7.0 ? '<br> you were approved' : '<br> you failed'
 
+        document.write(`
+        <br> you first school grade:${nota1} 
+        <br> you second school grade:${nota2} 
+        <br> ${approved_or_failed}`
+        )
 
 
     </script>

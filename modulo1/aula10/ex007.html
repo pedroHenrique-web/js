@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interact with user</title>
+    <style>
+
+        body{
+            background-color: darkcyan;
+        }
+
+        input{
+            font: normal 1em arial;
+        }
+        
+        #result{
+            color: white;
+            font: bold 1.7em Helvetica;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Sum" onclick="sum()">
+
+    <div id="result">
+        Result:
+    </div>
+    <script>
+        
+        function sum(){
+            var txt1 = document.querySelector('#txtn1')
+            var txt2 = document.querySelector('#txtn2')
+            var result = document.querySelector('#result')
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var sum = n1 + n2
+
+            result.innerHTML = `Result: <strong>${sum}</strong>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>understand DOM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background-color: rgb(95, 52, 95);
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            padding: 10px;
+        }
+
+        h1{
+            padding: 20px;
+        }
+
+
+        div{
+            background-color: rgba(255, 255, 0, 0.705);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px white;
+
+            padding: 50px;
+            margin: 20px auto;
+
+            min-width: 325px;
+            max-width: 400px;
+        }
+
+        div > p{
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+
+            font-weight: bold;
+            font-size: 2.1em;
+        }
+
+        div:hover{
+            background-color: rgba(7, 151, 7, 0.925);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello, i understand DOM now!!</h1>
+    <p>hello guys!!!</p>
+    <div id="button">
+        <p>click on me</p>
+    </div>
+
+    <script>
+        var p2 = document.getElementsByTagName('p')[1]
+        var body = window.document.body
+        var button = document.querySelector('div#button')
+
+        button.style.background = 'red'
+        /*
+        body.style.background = 'blue'
+        document.write(`this phrase is written like this: ${p2.innerText}`)
+        button.innerText = 'come on'
+        */
+    
+
+</script>
+
+
+</body>
+</html>
