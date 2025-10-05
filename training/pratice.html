@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pratice js</title>
+    <style>
+        :root{
+            --cinza: #454545;
+            --cinzaEscuro: #27151F;
+            --marrom: #302220;
+            --dourado: #F7C04E;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-image: linear-gradient(to top, var(--cinzaEscuro), var(--cinza));
+            background-repeat: no repeat;
+            background-attachment: fixed;
+        }
+
+        header{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: var(--marrom);
+            color: rgb(255, 255, 255);
+            text-align: center;
+
+            padding: 20px;
+
+            box-shadow: inset 0px -4px 4px var(--dourado);
+        }
+
+        main{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #forms-div-header{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px 10px 0px 0px;
+
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            
+            height: auto;
+            max-width: 750px;
+        }
+
+        #forms-div-header > h2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            
+            
+        }
+        
+        form{
+            background-color: var(--marrom); ;
+            box-shadow: 2px 3px 5px black;
+            text-indent: 10px;
+
+            height: auto;
+            margin: auto;
+
+            max-width: 750px;
+            
+        }
+
+        form > p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        input{
+            background-color: var(--dourado);
+            border-radius: 10px;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            margin: 10px auto;
+            padding: 3px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Create your RPG Character</h1>
+
+    </header>
+    <main>
+        <div id="forms-div-header">
+            <h2>Character</h2>
+        </div>
+        <form action="" id="formulario">
+            <p><label for="nametxt">Name:</label>
+                <input type="text" name="nametxt" id="nametxt">
+            </p>
+            <p><label for="racetxt">Race:</label>
+                <input type="text" name="racetxt" id="racetxt">
+            </p>
+            <p><label for="lifetxt">Life:</label>
+                <input type="number" name="lifetxt" id="lifetxt">
+            </p>
+
+            <input type="submit" value="Create Character" >
+        </form>
+        
+    </main>
+
+    <script>
+        const form = document.querySelector("#formulario");
+        
+        
+        form.addEventListener("submit", function(evento){
+            evento.preventDefault();
+            
+            if(document.querySelector("#nametxt").value === "" || document.querySelector("#racetxt").value === "" || document.querySelector("#lifetxt").value === ""){
+                alert("Please, fill all the fields!");
+                return;
+            }else{
+            localStorage.setItem("name", document.querySelector("#nametxt").value);
+            localStorage.setItem("race", document.querySelector("#racetxt").value);
+            localStorage.setItem("life", document.querySelector("#lifetxt").value);
+
+            window.location.href = "successPag.html";
+            }
+        });
+    </script>
+</body>
+</html>

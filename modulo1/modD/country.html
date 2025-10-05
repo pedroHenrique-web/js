@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How country u live</title>
+    <style>
+        body{
+            background-color: rgb(131, 233, 131);
+        }
+
+        #header-country{
+            background-color: rgb(211, 211, 91);
+            box-shadow: 2px 3px 5px black;
+            text-align: center;
+
+            max-width: 500px;
+            min-width: 325px;
+            margin: 20px auto;
+        }
+        
+        input{
+            padding-bottom: 20px;
+            margin-bottom: 5px;
+        }
+
+        #answer{
+            display: inline-block;
+            background-color: green;
+            box-shadow: 1px 3px 5px black;
+
+            margin-left: 98px;
+            margin-bottom: -55px;
+            height: 100px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-country">
+    <h1>Which country do you live in?</h1>
+    <input type="text" name="countrytxt" id="countrytxt" placeholder="country">
+    <button id="send">send</button>
+    
+    <div id="answer"></div>
+</div>
+
+<script>
+    var send = document.querySelector('#send')
+    var answer = document.querySelector('#answer')
+    
+    send.addEventListener('click', clickSend)
+
+    function clickSend(){
+        var countrytxt = document.querySelector('#countrytxt')
+        //take the value and transform in lowercase, trim remove the spaces after and before de string
+        var country = countrytxt.value.toLowerCase().trim()
+        
+        if(country === 'eua' || country === 'estados unidos'){
+            answer.innerHTML = `<p> eca, ${country} 🤢 </p>`
+        } else if(country === 'brasil'){
+            answer.innerHTML = `<p> oooooh, ${country} is the best country 🇧🇷 </p>`
+        } else if(country === ''){
+            answer.innerHTML = '<p> write your country </p>'
+        } else {
+            answer.innerHTML = `<p> ooooh, ${country} is better than EUA 😎 </p>`
+        }
+    }
+</script>
+</body>
+</html>

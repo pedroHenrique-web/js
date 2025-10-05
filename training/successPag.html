@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>success</title>
+    <style>
+        :root{
+            --cinza: #454545;
+            --cinzaEscuro: #27151F;
+            --marrom: #302220;
+            --dourado: #F7C04E;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: var(--marrom);
+            color: white;
+        }
+
+        header{
+            background-color: white;
+            color: black;
+            text-align: center;
+            box-shadow:  0px 6px 10px rgba(0, 0, 0, 0.685);
+        }
+
+        header>h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 4px 5px 3px rgba(0, 0, 0, 0.404);
+            
+            padding: 20px;
+        }
+
+        div#info{
+            margin: 20px;
+            padding: 20px;
+
+            border: 2px solid var(--dourado);
+            border-radius: 10px;
+        }
+
+        p{
+            margin: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Created character succesly!!</h1>
+    </header>
+
+    <div id="info">
+        <p id="nameinfo"></p>
+        <p id="raceinfo"></p>
+        <p id="lifeinfo"></p>
+
+    </div>
+    <script>
+        const nameinfo = localStorage.getItem("name");
+        const raceinfo = localStorage.getItem("race");
+        const lifeinfo = localStorage.getItem("life");
+
+        document.getElementById("nameinfo").innerText = `Name: ${nameinfo}`;
+        document.getElementById("raceinfo").innerText = `Race: ${raceinfo}`;
+        document.getElementById("lifeinfo").innerText = `Life: ${lifeinfo}`;
+    </script>
+</body>
+</html>

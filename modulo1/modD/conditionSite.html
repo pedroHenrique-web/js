@@ -9,7 +9,7 @@
             background-color: darkslateblue;
         }
 
-        #name-user{
+        #input-name-user{
             background-color: white;
             border-radius: 10px;
 
@@ -31,27 +31,56 @@
             font-size: 1.4em;
         }
 
+        #div-changes-color{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: #ffffff;
+            border-radius: 10px;
+
+            min-width: 325px;
+            max-width: 500px;
+            height: 250px;
+        }
+        #div-changes-color > p{
+            font-size: 1.4em;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-
-    <div id="name-user">
+    <div id="input-name-user">
         <p>
             <label for="nametxt">Write your name: </label>
             <input type="text" name="nametxt" id="nametxt">
+            <button type="button" id="btn">Enviar</button>
         </p>
     </div>
-    
-    <div id="div-changes-of-color">
 
+    <div id="div-changes-color">
+        <p id="write-name_user">Your name is: </p>
     </div>
 
-
     <script>
-        var name_user = document.querySelector("nametxt")
-        
-        
+        var inputName = document.querySelector("#nametxt")
+        var divNameUser = document.querySelector("#write-name_user")
+        var btn = document.querySelector("#btn")
 
+        btn.addEventListener('click', writeInDocument)
+
+        function writeInDocument() {
+            var divChangesColor = document.querySelector('#div-changes-color')
+            var name_user = inputName.value
+            
+            if(name_user != null){
+                divNameUser.innerHTML = `<p>Your name is: <strong>${name_user}</strong></p>`
+                divChangesColor.style.background = '#64baf3'
+            }else{
+                divChangesColor.style.background = '#ee2929'
+            }
+        }
     </script>
 </body>
 </html>
