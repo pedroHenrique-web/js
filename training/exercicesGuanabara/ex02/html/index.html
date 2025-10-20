@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <form>
+            <p>
+                <label for="num">Número</label>
+                <input type="number" name="numtxt" id="numtxt">
+                <input type="button" value="calcular" onclick="calcular()">
+                <input type="button" value="limpar" onclick="limpar()">
+            </p>
+            
+
+            <input type="radio" name="expressao" id="mult">
+            <label for="mult">multiplicar</label>
+
+            <input type="radio" name="expressao" id="soma">
+            <label for="soma">somar</label>
+
+            <input type="radio" name="expressao" id="dimi">
+            <label for="dimi">diminuir</label>
+
+            <input type="radio" name="expressao" id="divi">
+            <label for="divi">dividir</label>
+
+        </form>
+
+        <div id="tabuada">
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <a href="https://github.com/pedroHenrique-web" target="_blank">pedroHenrique-web</a></p>
+    </footer>
+    <script src="../js/tabuada.js"></script>
+</body>
+</html>

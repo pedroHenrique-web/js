@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background-color: rgb(12, 81, 94);
+}
+
+header > h1{
+    text-align: center;
+    color: white;
+    margin: 30px 0;
+}
+
+form > p{
+    text-align: start;
+}
+
+p#year{
+    text-align: center;
+}
+
+#form{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.397);
+
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    min-width: 325px;
+
+    padding: 20px;
+    margin: 10px auto;
+}
+
+p#textCalcAge{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+div#img{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+}
+footer > p{
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+
+    margin: 20px 0;
+
+}
+
+footer > p > a{
+    color: white;
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: rgb(0, 16, 160);
+    text-decoration: underline;
+}
